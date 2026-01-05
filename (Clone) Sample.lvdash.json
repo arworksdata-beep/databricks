@@ -1,0 +1,367 @@
+{
+  "datasets": [
+    {
+      "name": "94ee342b",
+      "displayName": "sample_data",
+      "queryLines": [
+        "SELECT * FROM workspace.default.sample_data"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "ca892949",
+      "displayName": "page1",
+      "layout": [
+        {
+          "widget": {
+            "name": "7a18d69d",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "94ee342b",
+                  "fields": [
+                    {
+                      "name": "Category",
+                      "expression": "`Category`"
+                    },
+                    {
+                      "name": "sum(Total Sales)",
+                      "expression": "SUM(`Total Sales`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Category",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(Total Sales)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Total Sales by Category",
+                "showTitle": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 7,
+            "width": 3,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "d51f9a4d",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "94ee342b",
+                  "fields": [
+                    {
+                      "name": "Order ID",
+                      "expression": "`Order ID`"
+                    },
+                    {
+                      "name": "Date",
+                      "expression": "`Date`"
+                    },
+                    {
+                      "name": "Product",
+                      "expression": "`Product`"
+                    },
+                    {
+                      "name": "Category",
+                      "expression": "`Category`"
+                    },
+                    {
+                      "name": "Price",
+                      "expression": "`Price`"
+                    },
+                    {
+                      "name": "Quantity",
+                      "expression": "`Quantity`"
+                    },
+                    {
+                      "name": "Total Sales",
+                      "expression": "`Total Sales`"
+                    },
+                    {
+                      "name": "Customer Name",
+                      "expression": "`Customer Name`"
+                    },
+                    {
+                      "name": "Customer Location",
+                      "expression": "`Customer Location`"
+                    },
+                    {
+                      "name": "Payment Method",
+                      "expression": "`Payment Method`"
+                    },
+                    {
+                      "name": "Status",
+                      "expression": "`Status`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "Order ID",
+                    "title": "Order ID",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  },
+                  {
+                    "fieldName": "Date",
+                    "title": "Date",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "date",
+                    "displayAs": "datetime"
+                  },
+                  {
+                    "fieldName": "Product",
+                    "title": "Product",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  },
+                  {
+                    "fieldName": "Category",
+                    "title": "Category",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  },
+                  {
+                    "fieldName": "Price",
+                    "title": "Price",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "integer",
+                    "displayAs": "number"
+                  },
+                  {
+                    "fieldName": "Quantity",
+                    "title": "Quantity",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "integer",
+                    "displayAs": "number"
+                  },
+                  {
+                    "fieldName": "Total Sales",
+                    "title": "Total Sales",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "integer",
+                    "displayAs": "number"
+                  },
+                  {
+                    "fieldName": "Customer Name",
+                    "title": "Customer Name",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  },
+                  {
+                    "fieldName": "Customer Location",
+                    "title": "Customer Location",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  },
+                  {
+                    "fieldName": "Payment Method",
+                    "title": "Payment Method",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  },
+                  {
+                    "fieldName": "Status",
+                    "title": "Status",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string"
+                  }
+                ]
+              },
+              "invisibleColumns": [],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "frame": {
+                "title": "Order Status Overview",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "c5bab602",
+            "queries": [
+              {
+                "name": "dashboards/01f0e9f58478125bac471350501c4c73/datasets/01f0e9f5b1fe17b89e20693f20617151_Customer Location",
+                "query": {
+                  "datasetName": "94ee342b",
+                  "fields": [
+                    {
+                      "name": "Customer Location",
+                      "expression": "`Customer Location`"
+                    },
+                    {
+                      "name": "Customer Location_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Customer Location",
+                    "queryName": "dashboards/01f0e9f58478125bac471350501c4c73/datasets/01f0e9f5b1fe17b89e20693f20617151_Customer Location"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Slicer"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "5b8c8200",
+            "queries": [
+              {
+                "name": "dashboards/01f0e9f58478125bac471350501c4c73/datasets/01f0e9f5b1fe17b89e20693f20617151_Product",
+                "query": {
+                  "datasetName": "94ee342b",
+                  "fields": [
+                    {
+                      "name": "Product",
+                      "expression": "`Product`"
+                    },
+                    {
+                      "name": "Product_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Product",
+                    "queryName": "dashboards/01f0e9f58478125bac471350501c4c73/datasets/01f0e9f5b1fe17b89e20693f20617151_Product"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Slicer"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 0,
+            "width": 2,
+            "height": 1
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
